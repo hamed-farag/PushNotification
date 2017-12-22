@@ -1,0 +1,1 @@
+const apiEndPoint = __PRODUCTION__ ? '/api' : 'http://localhost:5000/api';
