@@ -5,7 +5,7 @@ import todo from './todo';
 
 const rootReducer = combineReducers({
     todo,
-    routerReducer
+    routing: routerReducer
 });
 
 export default rootReducer;
