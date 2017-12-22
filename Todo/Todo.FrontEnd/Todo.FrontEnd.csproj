@@ -32,6 +32,29 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="src\app\actions\todo.js" />
+    <Content Include="src\app\ApiConfig.jsx" />
+    <Content Include="src\app\components\Navigation\index.jsx" />
+    <Content Include="src\app\config.jsx" />
+    <Content Include="src\app\constants\todo.js" />
+    <Content Include="src\app\containers\App.jsx" />
+    <Content Include="src\app\containers\Main\index.jsx" />
+    <Content Include="src\app\index.jsx" />
+    <Content Include="src\app\reducers\index.jsx" />
+    <Content Include="src\app\reducers\todo.js" />
+    <Content Include="src\app\routes.jsx" />
+    <Content Include="src\app\store.jsx" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="package.json" />
+    <None Include="src\app\containers\Main\styles.scss" />
+    <None Include="src\app\containers\styles.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\dispatchers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
