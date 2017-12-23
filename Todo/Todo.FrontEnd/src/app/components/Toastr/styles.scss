@@ -1,0 +1,21 @@
+.ToastrContainer {
+    background-color: #dedeff;
+    border: 1px solid #3434a0;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    &__Type {
+        &--error {
+            background-color: #ffdede;
+            border: 1px solid #a03434;
+        }
+        &--warning {
+            background-color: #ffffde;
+            border: 1px solid #9aa034;
+        }
+    }
+}
