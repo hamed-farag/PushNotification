@@ -140,7 +140,8 @@ var commonConfig = function (environment) {
 				containers: path.resolve(__dirname, 'src/app/containers'),
 				dispatchers: path.resolve(__dirname, 'src/app/dispatchers'),
 				reducers: path.resolve(__dirname, 'src/app/reducers'),
-				utilities: path.resolve(__dirname,'src/app/utilities')
+				utilities: path.resolve(__dirname,'src/app/utilities'),
+				helpers: path.resolve(__dirname,'src/app/helpers')
 			}
 		},
 		stats: {
