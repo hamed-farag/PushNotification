@@ -1,0 +1,15 @@
+﻿@model Todo.Models.TodoModels
+@{
+    ViewBag.Title = "TodoBackend";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TodoBackend</h2>
+
+@using (Html.BeginForm(Html.BeginForm("TodoBackend", "Todo", FormMethod.Post, new { enctype = "multipart/form-data", id = "TodoCreateForm" })))
+{
+    @Html.EditorFor(model => model.TodoItem)
+    <input type="submit" value="Add" />
+    <br/>
+    @Html.ValidationMessageFor(model => model.TodoItem, "")
+}
