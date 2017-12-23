@@ -1,0 +1,12 @@
+.TodoAppContainer {
+    &__List {
+        &__Header {}
+        &__Body {}
+    }
+    &__Form {
+        &__Input {}
+        &__Button {
+            margin-top: 10px;
+        }
+    }
+}

@@ -21,7 +21,8 @@
       "transform-class-properties",
       "transform-decorators-legacy",
       "transform-object-rest-spread",
-      "syntax-dynamic-import", [
+      "syntax-dynamic-import",
+      [
         "transform-regenerator",
         {
           "async": false
@@ -62,6 +63,7 @@
     "react": "^15.3.2",
     "react-appinsights": "^1.0.2",
     "react-async-loading": "^0.3.3",
+    "react-bootstrap": "^0.31.5",
     "react-click-outside": "^2.2.0",
     "react-confirm-alert": "^1.0.8",
     "react-dock": "^0.2.3",

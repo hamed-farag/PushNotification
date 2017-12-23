@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'react-router/lib/Link';
 
+import styles from  './styles.scss';
+
 export default () => {
     return (
-        <div>
-            <ul>
+        <div className="NavigationContainer">
+            <ul className="NavigationContainer__List">
                 <li>
                     <Link to={`/Todo`}>Home</Link>
                 </li>
