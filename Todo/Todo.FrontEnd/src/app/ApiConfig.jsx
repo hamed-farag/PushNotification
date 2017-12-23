@@ -1,9 +1,9 @@
-import globalConfig from './config';
+import { apiEndPoint } from './config';
 import SafeUrlAssembler from 'safe-url-assembler';
 
-const _rootUrl = globalConfig.apiEndPoint;
+const _rootUrl = apiEndPoint;
 
-export const todoAPI = `${_rootUrl}/todo`;
+export const todoAPI = `${_rootUrl}/TodoAPI`;
 
 /*
 export const testApi = function (id) {

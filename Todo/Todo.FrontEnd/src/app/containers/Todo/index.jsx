@@ -6,6 +6,8 @@ import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import FormControl from 'react-bootstrap/lib/FormControl';
 
+import { fetchTodoDispatcher } from 'dispatchers/Todo';
+
 import styles from './styles.scss';
 
 class Todo extends Component {
@@ -16,11 +18,22 @@ class Todo extends Component {
         }
     }
 
+    componentDidMount() {
+        this.props.fetchTodo();
+    }
+
     handleChange(e) {
         this.setState({ value: e.target.value });
     }
 
+    renderTodoList(data) {
+        return data.map((todoItem, index) => {
+            return (<ListGroupItem key={index}>{todoItem}</ListGroupItem>)
+        });
+    }
+
     render() {
+        const { todo: { data, loading } } = this.props;
         return (
             <div className="TodoAppContainer">
                 <div className="TodoAppContainer__List">
@@ -28,10 +41,13 @@ class Todo extends Component {
                         <h3>Todo List</h3>
                     </div>
                     <div className="TodoAppContainer__List__Body">
-                        <ListGroup>
-                            <ListGroupItem>Item 1</ListGroupItem>
-                            <ListGroupItem>Item 2</ListGroupItem>
-                        </ListGroup>
+                        {
+                            !loading ?
+                                <ListGroup>
+                                    {this.renderTodoList(data)}
+                                </ListGroup>
+                                : <span>Loading</span>
+                        }
                     </div>
                 </div>
                 <div className="TodoAppContainer__Form">
@@ -53,13 +69,13 @@ class Todo extends Component {
 
 function mapStateToProps(state) {
     return {
-
+        todo: state.todo
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-
+        fetchTodo: fetchTodoDispatcher(dispatch)
     }
 }
 

@@ -1,1 +1,1 @@
-const apiEndPoint = __PRODUCTION__ ? '/api' : 'http://localhost:5005/api';
+export const apiEndPoint = __PRODUCTION__ ? '/api' : 'http://localhost:5005/api';
