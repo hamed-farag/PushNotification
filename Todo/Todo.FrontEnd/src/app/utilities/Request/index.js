@@ -5,6 +5,9 @@ export default (url, actionType = 'get', data = {}) => {
         method: actionType,
         url: url,
         responseType: 'json',
-        data: data
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        data: JSON.stringify(data)
     });
 }

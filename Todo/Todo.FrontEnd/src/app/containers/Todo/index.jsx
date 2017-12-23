@@ -6,7 +6,7 @@ import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import FormControl from 'react-bootstrap/lib/FormControl';
 
-import { fetchTodoDispatcher } from 'dispatchers/Todo';
+import { fetchTodoDispatcher, addTodoDispatcher } from 'dispatchers/Todo';
 
 import styles from './styles.scss';
 
@@ -24,6 +24,12 @@ class Todo extends Component {
 
     handleChange(e) {
         this.setState({ value: e.target.value });
+    }
+
+    handleClick() {
+        if (this.state.value.trim() !== '') {
+            this.props.addTodo(this.state.value);
+        }
     }
 
     renderTodoList(data) {
@@ -56,10 +62,10 @@ class Todo extends Component {
                             type="text"
                             value={this.state.value}
                             placeholder="Enter text"
-                            onChange={this.handleChange} />
+                            onChange={this.handleChange.bind(this)} />
                     </div>
                     <div className="TodoAppContainer__Form__Button pull-right">
-                        <Button bsStyle="primary" bsSize="small">Add</Button>
+                        <Button bsStyle="primary" bsSize="small" onClick={this.handleClick.bind(this)}>Add</Button>
                     </div>
                 </div>
             </div>
@@ -75,7 +81,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        fetchTodo: fetchTodoDispatcher(dispatch)
+        fetchTodo: fetchTodoDispatcher(dispatch),
+        addTodo: addTodoDispatcher(dispatch)
     }
 }
 

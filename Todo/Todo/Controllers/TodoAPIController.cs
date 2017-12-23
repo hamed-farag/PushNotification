@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using Todo.Models;
 
 namespace Todo.Controllers
 {
@@ -15,9 +16,10 @@ namespace Todo.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public string Post([FromBody]TodoModels todoItem)
         {
-            Database.Todo.AddTodo(value);
+            Database.Todo.AddTodo(todoItem.TodoItem);
+            return todoItem.TodoItem;
         }
     }
 }

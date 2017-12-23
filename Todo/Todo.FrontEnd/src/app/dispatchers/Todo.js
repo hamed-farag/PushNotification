@@ -1,7 +1,10 @@
 import {
     fetchTodo,
     fetchTodoSuccess,
-    fetchTodoFailure
+    fetchTodoFailure,
+    addTodo,
+    addTodoSuccess,
+    addTodoFailure,
 } from 'actions/todo';
 
 export function fetchTodoDispatcher(dispatch) {
@@ -12,6 +15,18 @@ export function fetchTodoDispatcher(dispatch) {
             })
             .catch(function (error) {
                 dispatch(fetchTodoFailure(error))
+            });
+    }
+}
+
+export function addTodoDispatcher(dispatch) {
+    return (todoItem) => {
+        dispatch(addTodo(todoItem))
+            .then(function (response) {
+                dispatch(addTodoSuccess(todoItem, response))
+            })
+            .catch(function (error) {
+                dispatch(addTodoFailure(error))
             });
     }
 }
