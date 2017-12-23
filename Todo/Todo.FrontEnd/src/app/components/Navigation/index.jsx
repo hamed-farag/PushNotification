@@ -1,35 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import Link from 'react-router/lib/Link';
 
-class Navigation extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <ul>
-                    <li>
-                        <Link to={`/Todo`}>Home</Link>
-                    </li>
-                </ul>
-            </div>
-        );
-    }
+export default () => {
+    return (
+        <div>
+            <ul>
+                <li>
+                    <Link to={`/Todo`}>Home</Link>
+                </li>
+                <li>
+                    <Link to={`/Todo/Todo`}>Todo Application</Link>
+                </li>
+            </ul>
+        </div>
+    );
 }
-
-function mapStateToProps(state) {
-    return {
-
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

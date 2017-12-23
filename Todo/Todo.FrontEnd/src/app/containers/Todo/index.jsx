@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import styles from './styles.scss';
 
-class Main extends Component {
+class Todo extends Component {
     constructor(props) {
         super(props);
     }
@@ -11,7 +11,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome At Todo Application</h1>
+                
             </div>
         );
     }
@@ -29,4 +29,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);
