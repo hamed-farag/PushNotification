@@ -1,21 +1,19 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Todo Backend";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+@section styles{
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-</head>
-<body>
-    <div id="todoContainer"></div>
+}
+
+<div id="todoContainer"></div>
+
+@section scripts{
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
     <script src="~/Scripts/FrontEnd/js/App.min.js"></script>
-</body>
-</html>
+}

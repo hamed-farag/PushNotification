@@ -16,7 +16,7 @@ namespace Todo.Controllers
         }
 
         // POST api/values
-        public string Post([FromBody]TodoModels todoItem)
+        public string Post([FromBody]TodoModel todoItem)
         {
             Database.Todo.AddTodo(todoItem.TodoItem);
             return todoItem.TodoItem;

@@ -9,11 +9,6 @@ namespace Todo.SignalR
 {
     public class TodoHub : Hub
     {
-        public void Hello()
-        {
-            Clients.All.hello();
-        }
-
         public void AddTodo(string todo)
         {
             // Call the addNewMessageToPage method to update clients.

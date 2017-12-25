@@ -21,7 +21,7 @@ namespace Todo.Controllers
         }
 
         [HttpPost]
-        public ActionResult TodoBackend(TodoModels todo)
+        public ActionResult TodoBackend(TodoModel todo)
         {
             var context = GlobalHost.ConnectionManager.GetHubContext("TodoHub");
             if (todo.TodoItem != null && !string.IsNullOrEmpty(todo.TodoItem.Trim()))

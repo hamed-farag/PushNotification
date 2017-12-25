@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Todo.Models
 {
-    public class TodoModels
+    public class TodoModel
     {
         [Required]
         public string TodoItem { get; set; }
